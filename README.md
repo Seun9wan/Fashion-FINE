@@ -1,6 +1,8 @@
-# FashionFINE
+# FashionFINE: Integration of global and local representations for fine-grained cross-modal alignment
 
-FashionFINE is a framework for fine-grained cross-modal retrieval in fashion-related datasets.
+FashionFINE is a framework for fine-grained cross-modal retrieval in fashion-related datasets. 
+This paper is accepted by The European Conference on Computer Vision (ECCV) 2024 (ECCV 2024) [paper](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/10886.pdf).
+---
 
 ## 📌 Requirements
 To install dependencies, run:
@@ -99,5 +101,21 @@ bash fashionfine_blip.sh
    ```bash
    cd ../checkpoint
    cd ../FashionFINE_BLIP
+
+## Citations
+
+If you find this code useful for your research, please cite:
+
+```
+@inproceedings{jin2024integration,
+  title={Integration of global and local representations for fine-grained cross-modal alignment},
+  author={Jin, Seungwan and Choi, Hoyoung and Noh, Taehyung and Han, Kyungsik},
+  booktitle={European Conference on Computer Vision},
+  pages={53--70},
+  year={2024},
+  organization={Springer}
+}
+```
+
    bash eval_fashionfine_blip.sh
    ```
