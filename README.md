@@ -30,8 +30,7 @@ FashionFINE follows the dataset preparation process of [FashionSAP](https://gith
 ### 🏷️ FashionIQ
 1. Download and extract the raw dataset to `data_root`.
 2. Move the `captions` and `images` directories into `data_root`.
-3. Merge all train files into `cap.train.json` within `captions`, and do the same for validation files.
-4. Ensure FashionIQ images are stored in:
+3. Ensure FashionIQ images are stored in:
    ```
    data_root/tgir_images
    ```
@@ -46,8 +45,6 @@ Download the pre-trained model from the link below and place it in `checkpoint_p
 ### 2️⃣ Start Pre-training
 Run the following commands:
 ```
-cd checkpoint_pretrain
-cd ../
 bash pt.sh
 ```
 
