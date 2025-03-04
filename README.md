@@ -6,7 +6,7 @@ FashionFINE is a framework for fine-grained cross-modal retrieval in fashion-rel
 
 ## 📌 Requirements
 To install dependencies, run:
-```bash
+```
 pip install -r requirements.txt
 ```
 
@@ -19,7 +19,7 @@ FashionFINE follows the dataset preparation process of [FashionSAP](https://gith
 1. Download and extract the raw dataset to `data_root`.
 2. Update `data_root` and `split` in `prepare_dataset.py`.
 3. Run the script to generate the assistance file:
-   ```bash
+   ```
    python prepare_dataset.py
    ```
 4. Ensure the original FashionGen images are stored in:
@@ -45,7 +45,7 @@ Download the pre-trained model from the link below and place it in `checkpoint_p
 
 ### 2️⃣ Start Pre-training
 Run the following commands:
-```bash
+```
 cd checkpoint_pretrain
 cd ../
 bash pt.sh
@@ -55,7 +55,7 @@ bash pt.sh
 
 ## 🎯 Fine-tuning & Evaluation
 ### 🚀 Fine-tuning Cross-modal Retrieval
-```bash
+```
 bash retrieval.sh
 ```
 
@@ -63,12 +63,12 @@ bash retrieval.sh
 1. Download the fine-tuned checkpoint from:
    [Download Model](https://drive.google.com/file/d/1IRAs-UG8cwtogEWPYLFetyG8jJ-7mJuz/view?usp=sharing)
 2. Run evaluation:
-   ```bash
+   ```
    bash eval_cmr.sh
    ```
 
 ### 🔍 Fine-tuning Text-guided Image Retrieval
-```bash
+```
 bash tgir.sh
 ```
 
@@ -76,7 +76,7 @@ bash tgir.sh
 1. Download the fine-tuned checkpoint from:
    [Download Model](https://drive.google.com/file/d/1e5tF-QWM2RZa5W4My7SdiOJF2jl3sydN/view?usp=sharing)
 2. Run evaluation:
-   ```bash
+   ```
    bash eval_TGIR.sh
    ```
 
@@ -90,7 +90,7 @@ wget https://storage.googleapis.com/sfr-vision-language-research/BLIP/models/mod
 ```
 
 ### 2️⃣ Fine-tuning FashionFINE on BLIP
-```bash
+```
 bash fashionfine_blip.sh
 ```
 
@@ -98,8 +98,7 @@ bash fashionfine_blip.sh
 1. Download the checkpoint from:
    [Download Model](https://drive.google.com/file/d/1rjQXvixkCYwOgC2QcjrQMRIhFxLR0IA4/view?usp=sharing)
 2. Run evaluation:
-   ```bash
-   cd ../checkpoint
+   ```
    cd ../FashionFINE_BLIP
    bash eval_fashionfine_blip.sh
    ```
