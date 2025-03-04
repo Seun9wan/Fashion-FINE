@@ -1,0 +1,1 @@
+CUDA_VISIBLE_DEVICES=0 python -m torch.distributed.launch --nproc_per_node=1 --use_env --master_port=45999 tgir.py --output_dir output/FashionFINE_tgir --pre_point FashionFINE_pt/checkpoint_best.pth --data_root data_root --config ./configs/fashion_tgir.yaml

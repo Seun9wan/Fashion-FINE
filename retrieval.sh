@@ -1,0 +1,1 @@
+CUDA_VISIBLE_DEVICES=0,1 python -m torch.distributed.launch --nproc_per_node=2 --use_env --master_port=47689 retrieval.py --data_root data_root --pre_point FashionFINE_pt/checkpoint_best.pth --output_dir output/FashionFINE_retrieval  --text_patch_ratio 0.25 --img_patch_ratio 0.05 --alpha_focal 0.25 --gamma_focal 2.0 

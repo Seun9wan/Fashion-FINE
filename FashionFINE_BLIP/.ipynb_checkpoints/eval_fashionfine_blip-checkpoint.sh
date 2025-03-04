@@ -1,0 +1,1 @@
+CUDA_VISIBLE_DEVICES=0,1,2,3 python -m torch.distributed.run --nproc_per_node=4 train_retrieval_fashionfine.py --config ./configs/retrieval_fashionfine_eval.yaml --output_dir output/retrieval_fashionfine_fashiongen_ft_2 --evaluate
