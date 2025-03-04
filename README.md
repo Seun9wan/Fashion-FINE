@@ -101,6 +101,8 @@ bash fashionfine_blip.sh
    ```bash
    cd ../checkpoint
    cd ../FashionFINE_BLIP
+   bash eval_fashionfine_blip.sh
+   ```
 
 ## Citations
 
@@ -116,6 +118,3 @@ If you find this code useful for your research, please cite:
   organization={Springer}
 }
 ```
-
-   bash eval_fashionfine_blip.sh
-   ```
