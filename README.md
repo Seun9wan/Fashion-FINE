@@ -1,58 +1,103 @@
-This is the source code of FashionFINE.
+# FashionFINE
 
-### Requirements:
+FashionFINE is a framework for fine-grained cross-modal retrieval in fashion-related datasets.
+
+## 📌 Requirements
+To install dependencies, run:
+```bash
 pip install -r requirements.txt
+```
 
-### Prepare dataset:
-We followed dataset preparation same as FashionSAP https://github.com/hssip/FashionSAP
+---
 
-#### FashionGen
-Download the raw file and extract it from the path *data_root*.
-Change the *data_root* and *split* in *prepare_dataset.py* and run it to get the assistance file.
+## 📂 Dataset Preparation
+FashionFINE follows the dataset preparation process of [FashionSAP](https://github.com/hssip/FashionSAP).
 
-To train BLIP, original FashionGen images should be located in data_root/images.
+### 🛍️ FashionGen
+1. Download and extract the raw dataset to `data_root`.
+2. Update `data_root` and `split` in `prepare_dataset.py`.
+3. Run the script to generate the assistance file:
+   ```bash
+   python prepare_dataset.py
+   ```
+4. Ensure the original FashionGen images are stored in:
+   ```
+   data_root/images
+   ```
 
-#### FashionIQ
-Download the raw file and extract it in path data_root.
-The directory *captions* and *images* in the raw file are put in *data_root*. Besides the file, we also merge all kinds of train files into the *cap.train.json* file in captions so as to *val*.
+### 🏷️ FashionIQ
+1. Download and extract the raw dataset to `data_root`.
+2. Move the `captions` and `images` directories into `data_root`.
+3. Merge all train files into `cap.train.json` within `captions`, and do the same for validation files.
+4. Ensure FashionIQ images are stored in:
+   ```
+   data_root/tgir_images
+   ```
 
-FashionIQ images should be located in data_root/tgir_images
+---
 
-### Prepare pre-training
+## 🔥 Pre-training
+### 1️⃣ Download Pre-trained Model
+Download the pre-trained model from the link below and place it in `checkpoint_pretrain`:
+[Download Model](https://drive.google.com/file/d/16kxbK7u86jVUfkwM7_4q2lJhCYeutgRv/view?usp=sharing)
+
+### 2️⃣ Start Pre-training
+Run the following commands:
+```bash
 cd checkpoint_pretrain
-### Please download a model from https://drive.google.com/file/d/16kxbK7u86jVUfkwM7_4q2lJhCYeutgRv/view?usp=sharing
-
-### Pre-training
 cd ../
 bash pt.sh
+```
 
-### Fine-tuning cross-modal retrieval
+---
+
+## 🎯 Fine-tuning & Evaluation
+### 🚀 Fine-tuning Cross-modal Retrieval
+```bash
 bash retrieval.sh
+```
 
-### Evaluate cross-modal retrieval using the fine-tuned FashionFINE checkpoint
-### Please download a model from https://drive.google.com/file/d/1IRAs-UG8cwtogEWPYLFetyG8jJ-7mJuz/view?usp=sharing
-bash eval_cmr.sh
+### 📊 Evaluate Cross-modal Retrieval
+1. Download the fine-tuned checkpoint from:
+   [Download Model](https://drive.google.com/file/d/1IRAs-UG8cwtogEWPYLFetyG8jJ-7mJuz/view?usp=sharing)
+2. Run evaluation:
+   ```bash
+   bash eval_cmr.sh
+   ```
 
-### Fine-tuning text-guided image retrieval
+### 🔍 Fine-tuning Text-guided Image Retrieval
+```bash
 bash tgir.sh
+```
 
-### Evaluate text-guided image retrieval using the fine-tuned FashionFINE checkpoint
-### Please download a model from https://drive.google.com/file/d/1e5tF-QWM2RZa5W4My7SdiOJF2jl3sydN/view?usp=sharing
-bash eval_TGIR.sh
+### 📈 Evaluate Text-guided Image Retrieval
+1. Download the fine-tuned checkpoint from:
+   [Download Model](https://drive.google.com/file/d/1e5tF-QWM2RZa5W4My7SdiOJF2jl3sydN/view?usp=sharing)
+2. Run evaluation:
+   ```bash
+   bash eval_TGIR.sh
+   ```
 
+---
 
-
-### FashionFINE on BLIP
+## 📌 FashionFINE on BLIP
+### 1️⃣ Download Pre-trained BLIP Model
+```bash
 cd FashionFINE_BLIP
-
-### Get pre-trained BLIP weight
 wget https://storage.googleapis.com/sfr-vision-language-research/BLIP/models/model_base.pth
+```
 
-### Fine-tuning FashionFINE on BLIP
+### 2️⃣ Fine-tuning FashionFINE on BLIP
+```bash
 bash fashionfine_blip.sh
+```
 
-### Evaluate Retrieval using fine-tuned checkpoint. Please check the file named "retrieval_fashionfine_eval.yaml."
-cd ../checkpoint
-Please download a model from https://drive.google.com/file/d/1rjQXvixkCYwOgC2QcjrQMRIhFxLR0IA4/view?usp=sharing
-cd ../FashionFINE_BLIP
-bash eval_fashionfine_blip.sh
+### 3️⃣ Evaluate Retrieval with Fine-tuned Checkpoint
+1. Download the checkpoint from:
+   [Download Model](https://drive.google.com/file/d/1rjQXvixkCYwOgC2QcjrQMRIhFxLR0IA4/view?usp=sharing)
+2. Run evaluation:
+   ```bash
+   cd ../checkpoint
+   cd ../FashionFINE_BLIP
+   bash eval_fashionfine_blip.sh
+   ```
