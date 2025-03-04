@@ -2,7 +2,7 @@
 
 FashionFINE is a framework for fine-grained cross-modal retrieval in fashion-related datasets. 
 
-This paper is accepted by The European Conference on Computer Vision (ECCV) 2024 (ECCV 2024) [paper](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/10886.pdf).
+This paper is accepted by The European Conference on Computer Vision (ECCV) 2024 [paper](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/10886.pdf).
 
 ---
 
