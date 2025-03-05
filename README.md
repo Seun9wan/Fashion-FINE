@@ -102,7 +102,7 @@ bash fashionfine_blip.sh
 
 ## Citations
 
-If you find this code useful for your research, please cite:
+If you find this project useful for your research, please use the following BibTeX entry.
 
 ```
 @inproceedings{jin2024integration,
