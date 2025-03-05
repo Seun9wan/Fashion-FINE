@@ -1,6 +1,6 @@
-# FashionFINE: Integration of global and local representations for fine-grained cross-modal alignment
+# Fashion-FINE: Integration of global and local representations for fine-grained cross-modal alignment
 
-FashionFINE is a framework for fine-grained cross-modal retrieval in fashion-related datasets. This paper is accepted by The European Conference on Computer Vision (ECCV) 2024 [paper](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/10886.pdf).
+Fashion-FINE is a framework for fine-grained cross-modal retrieval in fashion-related datasets. This paper is accepted by The European Conference on Computer Vision (ECCV) 2024 [paper](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/10886.pdf).
 
 ---
 
@@ -13,7 +13,7 @@ pip install -r requirements.txt
 ---
 
 ## 📂 Dataset Preparation
-FashionFINE follows the dataset preparation process of [FashionSAP](https://github.com/hssip/FashionSAP).
+Fashion-FINE follows the dataset preparation process of [FashionSAP](https://github.com/hssip/FashionSAP).
 
 ### 🛍️ FashionGen
 1. Download and extract the raw dataset to `data_root`.
@@ -79,14 +79,14 @@ bash tgir.sh
 
 ---
 
-## 📌 FashionFINE on BLIP
+## 📌 Fashion-FINE on BLIP
 ### 1️⃣ Download Pre-trained BLIP Model
 ```bash
-cd FashionFINE_BLIP
+cd Fashion-FINE_BLIP
 wget https://storage.googleapis.com/sfr-vision-language-research/BLIP/models/model_base.pth
 ```
 
-### 2️⃣ Fine-tuning FashionFINE on BLIP
+### 2️⃣ Fine-tuning Fashion-FINE on BLIP
 ```
 bash fashionfine_blip.sh
 ```
